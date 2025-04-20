@@ -1083,7 +1083,7 @@ if __name__ == '__main__':
         'http://localhost:5848',
         width=1200,
         height=800,
-        resizable=True,  # 改为可调整大小
+        resizable=False,
         frameless=False,
         easy_drag=True,
         transparent=False,
