@@ -12,11 +12,11 @@
 <div align="center">
   
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![GitHub Release](https://img.shields.io/github/v/release/yourname/SimpleToolkit?color=green)](https://github.com/yourname/SimpleToolkit/releases)
-[![Status](https://img.shields.io/badge/status-开发中-yellow)](https://github.com/yourname/SimpleToolkit/commits/main)
-[![Last Commit](https://img.shields.io/github/last-commit/yourname/SimpleToolkit?color=orange)](https://github.com/yourname/SimpleToolkit/commits/main)
-[![Downloads](https://img.shields.io/github/downloads/yourname/SimpleToolkit/total?color=blue)](https://github.com/yourname/SimpleToolkit/releases)
-[![Open Issues](https://img.shields.io/github/issues/yourname/SimpleToolkit?color=red)](https://github.com/yourname/SimpleToolkit/issues)
+[![GitHub Release](https://img.shields.io/github/v/release/laobamac/SimpleToolkit?color=green)](https://github.com/yourname/SimpleToolkitGUI/releases)
+[![Status](https://img.shields.io/badge/status-开发中-yellow)](https://github.com/laobamac/SimpleToolkitGUI/commits/main)
+[![Last Commit](https://img.shields.io/github/last-commit/yourname/SimpleToolkit?color=orange)](https://github.com/laobamac/SimpleToolkitGUI/commits/main)
+[![Downloads](https://img.shields.io/github/downloads/yourname/SimpleToolkit/total?color=blue)](https://github.com/laobamac/SimpleToolkitGUI/releases)
+[![Open Issues](https://img.shields.io/github/issues/yourname/SimpleToolkit?color=red)](https://github.com/laobamac/SimpleToolkitGUI/issues)
 
 </div>
 
