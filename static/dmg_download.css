@@ -1,0 +1,245 @@
+/* /static/dmg_download.css */
+.dmg-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.dmg-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+}
+
+.dmg-info h4 {
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.dmg-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.dmg-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.downloads-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.download-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.download-info {
+    flex: 1;
+}
+
+.download-filename {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.download-path {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    word-break: break-all;
+}
+
+.download-status {
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.download-speed {
+    color: var(--primary-color);
+}
+
+.download-eta {
+    color: var(--text-light);
+}
+
+.download-close {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 15px;
+    transition: var(--transition);
+}
+
+.download-close:hover {
+    color: var(--danger-color);
+    transform: scale(1.1);
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    height: 6px;
+    overflow: hidden;
+}
+
+.download-progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    border-radius: 8px;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .dmg-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .dmg-actions {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .dmg-actions .btn {
+        flex: 1;
+    }
+}
+
+.dmg-list-container {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    transition: max-height 0.3s ease;
+}
+
+.dmg-list-container.collapsed {
+    max-height: 200px;
+    overflow-y: hidden;
+}
+
+.toggle-list-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 10px 0;
+    padding: 8px;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 13px;
+    transition: var(--transition);
+}
+
+.toggle-list-btn:hover {
+    color: var(--secondary-color);
+}
+
+.toggle-list-btn i {
+    transition: transform 0.3s ease;
+}
+
+.toggle-list-btn.collapsed i {
+    transform: rotate(180deg);
+}
+
+.refresh-btn {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    font-size: 14px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.refresh-btn:hover {
+    color: var(--primary-color);
+    background: rgba(var(--primary-color-rgb), 0.1);
+}
+
+.refresh-btn .fa-spin {
+    animation: fa-spin 1s infinite linear;
+}
+
+.section-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.empty-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.empty-placeholder i {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: var(--text-light);
+    opacity: 0.6;
+}
+
+.empty-placeholder p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* 全局过渡效果 */
+* {
+    transition: 
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* 按钮悬停效果 */
+.btn {
+    transition: 
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease !important;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}

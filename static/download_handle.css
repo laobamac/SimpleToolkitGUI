@@ -1,0 +1,210 @@
+/* /static/download_handle.css */
+.download-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.3s ease;
+}
+
+.download-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+}
+
+.download-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.download-filename {
+    font-weight: 600;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.download-path {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.download-status {
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.download-progress {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.download-speed {
+    color: var(--text-light);
+}
+
+.download-eta {
+    color: var(--text-light);
+}
+
+.download-actions {
+    display: flex;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+.download-progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    border-radius: 8px;
+    transition: width 0.3s ease;
+}
+
+/* 状态指示器 */
+.download-item.error {
+    border-left: 3px solid var(--danger-color);
+}
+
+.download-item.completed {
+    border-left: 3px solid var(--success-color);
+}
+
+/* 空状态提示 */
+.downloads-list .empty-message {
+    text-align: center;
+    color: var(--text-light);
+    padding: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .download-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .download-actions {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: flex-end;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 错误模态框样式 */
+.error-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.error-modal {
+    background: var(--card-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    width: 450px;
+    max-width: 90%;
+    box-shadow: var(--shadow);
+}
+
+.error-modal h3 {
+    color: var(--danger-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.error-modal h3 i {
+    font-size: 24px;
+}
+
+.possible-fixes {
+    margin: 15px 0;
+    padding: 15px;
+    background: rgba(var(--primary-color-rgb), 0.05);
+    border-radius: 8px;
+}
+
+.possible-fixes p {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.possible-fixes ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.possible-fixes li {
+    margin-bottom: 5px;
+}
+
+/* 路径错误对话框样式 */
+.path-error-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.path-error-dialog .dialog-content {
+    background: var(--card-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: var(--shadow);
+}
+
+.path-error-dialog h3 {
+    color: var(--danger-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.path-error-dialog .suggestions {
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(var(--primary-color-rgb), 0.05);
+    border-radius: 8px;
+}
+
+.path-error-dialog .dialog-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
